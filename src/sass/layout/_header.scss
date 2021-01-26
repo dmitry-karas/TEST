@@ -1,0 +1,52 @@
+.header {
+  @include mobile-only {
+    padding-top: 30px;
+  }
+
+  @include tablet-only {
+    padding-top: 40px;
+  }
+
+  @include desktop-only {
+    padding-top: 33px;
+  }
+}
+
+.header__menu {
+  transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
+
+  @media screen and (max-width: 1343px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(17, 21, 24, 0.9);
+  }
+
+  @include mobile-only {
+    padding-top: 108px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include tablet-only {
+    padding-top: 159px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include desktop-only {
+    margin-left: auto;
+  }
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+}

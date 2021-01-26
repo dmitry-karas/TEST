@@ -1,0 +1,39 @@
+.container {
+  margin: 0 auto;
+
+  @include mobile-only {
+    max-width: 320px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include tablet-only {
+    max-width: 768px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include desktop-only {
+    max-width: 1344px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .header & {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include mobile-only {
+      justify-content: space-between;
+    }
+  }
+
+  .hero & {
+    position: relative;
+  }
+
+  // .problems & {
+  //   position: relative;
+  // }
+}
